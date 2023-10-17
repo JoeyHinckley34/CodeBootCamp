@@ -21,15 +21,19 @@ public:
     }
 };
 
-int main(){
-    Solution a;
-    vector<int> v = {0,1,2,3,2,2,3};
-    int index = a.removeElement(v,3);
-    cout << index << endl;
-    for(int i = 0; i < index; i++){
+void printVector( vector<int> v, int s){
+    for(int i = 0; i < s; i++){
         cout << v[i] << " ";
     }
     cout << endl;
+}
+
+int main(){
+    Solution a;
+    vector<int> v = {0,9,1,9,2,3,9,9,4};
+    int index = a.removeElement(v,9);
+    cout << index << endl;
+    printVector(v,index);
     return 0;
 }
 
